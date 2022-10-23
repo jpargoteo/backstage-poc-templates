@@ -16,7 +16,7 @@ metadata:
         - project
       properties:
         entityTags:
-          type: array
+          type: arraygi
           ui:field: EntityTagsPicker
         name:
           title: Name
@@ -25,14 +25,14 @@ metadata:
           ui:autofocus: true
           ui:options:
             rows: 5
-        name:
+        description:
           title: description
           type: string
           description: Description of the service
           ui:autofocus: true
           ui:options:
             rows: 5
-        name:
+        project:
           title: project
           type: string
           description: Name of the project
