@@ -1,0 +1,52 @@
+# Notice the v1beta3 version
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: backstage-poc-base-template
+  title: POC base template
+  description: This is a POC base template
+
+  # these are the steps which are rendered in the frontend with the form input
+  parameters:
+    - title: Service
+      required:
+        - name
+        - description
+        - project
+      properties:
+        entityTags:
+          type: array
+          ui:field: EntityTagsPicker
+        name:
+          title: Name
+          type: string
+          description: Unique name of the component
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        name:
+          title: description
+          type: string
+          description: Description of the service
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        name:
+          title: project
+          type: string
+          description: Name of the project
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+    - title: People of contact
+      properties:
+        peopleOfContact:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
